@@ -87,96 +87,281 @@ form .btn{width:100%;margin-top:6px}
 .tb b{font-weight:700}
 @media (min-width:700px){.wrap{padding-top:56px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* ---- additions: language toggle, who we are, platforms, FAQ, RTL ---- */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.lang{background:transparent;color:var(--paper);border:2px solid var(--line);border-radius:4px;min-height:44px;padding:8px 14px;font:700 16px/1 'Schibsted Grotesk',system-ui,sans-serif;cursor:pointer}
+.lang:hover{background:rgba(207,224,255,.12)}
+.lang:focus-visible{outline:3px solid var(--paper);outline-offset:3px}
+.who p,.plat{color:var(--body);font-size:17px;margin-top:16px}
+.plat b{color:var(--paper);font-weight:700}
+.faq h2{margin-bottom:0}
+.faq details{border-bottom:2px solid var(--line)}
+.faq details:first-of-type{border-top:2px solid var(--line);margin-top:20px}
+.faq summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:700;font-size:19px;display:flex;justify-content:space-between;gap:14px;color:var(--paper)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';color:var(--hi);font-size:26px;line-height:1;flex:none}
+.faq details[open] summary::after{content:'\2212'}
+.faq details p{color:var(--body);font-size:17px;padding:0 0 18px}
+.faq summary:focus-visible{outline:3px solid var(--paper);outline-offset:3px}
+
+.logos{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.logos .chip{display:flex;align-items:center;justify-content:center;min-height:52px;padding:8px 18px;border-radius:4px;font-weight:700;font-size:17px;color:var(--deep);background:var(--paper)}
+.logos .chip:has(img){padding:0;overflow:hidden;background:none}
+.logos img{height:52px;width:auto;max-width:170px;display:block;border-radius:4px}
+.scarce{margin-top:16px;color:var(--hi);font-weight:700;font-size:16px}
+[dir=rtl] body{font-family:'Segoe UI',Tahoma,system-ui,-apple-system,sans-serif}
+[dir=rtl] h1,[dir=rtl] h2{font-family:'Segoe UI',Tahoma,system-ui,sans-serif;font-weight:800;line-height:1.3}
+[dir=rtl] h1{font-size:clamp(38px,11vw,56px)}
+[dir=rtl] h2{font-size:clamp(28px,8vw,38px)}
+[dir=rtl] .brand span{font-family:'Big Shoulders Display',sans-serif}
+[dir=rtl] select{background-position:22px 24px,16px 24px;padding-right:14px;padding-left:40px}
+[dir=rtl] .tb div:last-child{border-left:0;border-right:2px solid var(--line)}
+#store{direction:ltr}
+[dir=rtl] #store{text-align:right}
 </style>
 </head>
 <body>
 <main class="wrap">
 
-  <header class="brand">
+  <header class="top">
+    <div class="brand">
     <svg viewBox="0 0 100 100" aria-hidden="true"><rect x="5" y="5" width="90" height="90" fill="none" stroke="#F4F8FF" stroke-width="6"/><rect x="22" y="22" width="56" height="15" fill="#F4F8FF"/><rect x="42.5" y="37" width="15" height="41" fill="#F4F8FF"/><rect x="65" y="64" width="13" height="14" fill="#FFD447"/></svg>
-    <span>T Area Media</span>
+      <span>T Area Media</span>
+    </div>
+    <button class="lang" id="lang-btn" type="button" lang="ar">العربية</button>
   </header>
 
-  <section class="hero" style="margin-top:0">
-    <h1>Paid ads for D2C brands that already sell.</h1>
-    <p class="lead">We run Meta, TikTok, Snapchat and Google ads for D2C brands. We start with your numbers, and we tell you honestly if we're a fit.</p>
+  <section class="hero">
+    <h1 data-i18n="h1">Profitable ads for ecommerce brands doing SAR 100K+ a month.</h1>
+    <p class="lead" data-i18n="lead">We run Meta, TikTok, Snapchat and Google ads for ecommerce and D2C brands that already sell. We start with your numbers, and we tell you honestly if we're a fit.</p>
     <div class="cta">
-      <a class="btn primary" href="#fit">Check if we're a fit</a>
-      <a class="btn ghost" id="wa-direct" href="#">Message us on WhatsApp</a>
+      <a class="btn primary" href="#fit" data-i18n="cta_fit">Get your free audit</a>
+      <a class="btn ghost" id="wa-direct" href="#" data-i18n="cta_wa">Message us on WhatsApp</a>
     </div>
+    <p class="scarce" data-i18n="scarce">We take on only 2 new brands a month.</p>
+    <p class="plat"><b data-i18n="plat_b">Works with</b> <span data-i18n="plat">Salla, Zid and Shopify stores.</span></p>
+    <div class="logos" aria-label="Supported store platforms"><span class="chip"><img src="logos/shopify.png" alt="Shopify" onerror="this.replaceWith(document.createTextNode(this.alt))"></span><span class="chip"><img src="logos/salla.svg" alt="Salla" onerror="this.replaceWith(document.createTextNode(this.alt))"></span><span class="chip"><img src="logos/zid.svg" alt="Zid" onerror="this.replaceWith(document.createTextNode(this.alt))"></span></div>
   </section>
 
   <section class="how">
-    <h2>How we decide</h2>
+    <h2 data-i18n="get_h">What you get</h2>
     <ul>
-      <li><div><b>Your margin</b><span>We start with your break-even, not a ROAS target.</span></div></li>
-      <li><div><b>Your bottleneck</b><span>If ads aren't the problem, we'll say so.</span></div></li>
-      <li><div><b>Your tracking</b><span>We check Meta against your store and build our own attribution.</span></div></li>
-      <li><div><b>A testing phase</b><span>2 to 4 weeks of testing before we scale.</span></div></li>
+      <li><div><b data-i18n="get1_t">Market and competitor study</b><span data-i18n="get1_d">Who you're up against and what's working in your market.</span></div></li>
+      <li><div><b data-i18n="get2_t">Free ad account and store audit</b><span data-i18n="get2_d">A short report on where you're losing sales and what to fix first.</span></div></li>
+      <li><div><b data-i18n="get3_t">Strategy built on your goals</b><span data-i18n="get3_d">A testing plan based on your margins and your bottlenecks.</span></div></li>
+      <li><div><b data-i18n="get4_t">Ads run and reported</b><span data-i18n="get4_d">We launch and optimize your campaigns and send clear, honest reports.</span></div></li>
     </ul>
-    <p class="promise">We don't guarantee results. We promise clear testing, honest reports, and fast replies.</p>
+  </section>
+
+  <section class="how">
+    <h2 data-i18n="how_h">How we decide</h2>
+    <ul>
+      <li><div><b data-i18n="how1_t">Your margin</b><span data-i18n="how1_d">We start with your break-even, not a ROAS target.</span></div></li>
+      <li><div><b data-i18n="how2_t">Your bottleneck</b><span data-i18n="how2_d">If ads aren't the problem, we'll say so.</span></div></li>
+      <li><div><b data-i18n="how3_t">Your tracking</b><span data-i18n="how3_d">We check Meta against your store and build our own attribution.</span></div></li>
+      <li><div><b data-i18n="how4_t">A testing phase</b><span data-i18n="how4_d">2 to 4 weeks of testing before we scale.</span></div></li>
+    </ul>
+    <p class="promise" data-i18n="promise">No honest media buyer can guarantee results. We promise a clear testing plan with agreed numbers before we scale, honest reports, fast replies, and a fee tied to your sales, so we're paid to grow them.</p>
+  </section>
+
+  <section class="who">
+    <h2 data-i18n="who_h">Who's behind this</h2>
+    <p data-i18n="who_p">T Area Media is a team of experienced media buyers and performance marketers who run paid ads for ecommerce and D2C brands. We study your competitors, audit your ad account and store, then plan, launch and optimize campaigns across Meta, TikTok, Snapchat and Google. You talk directly to the people who build your ads.</p>
+  </section>
+
+  <section class="how">
+    <h2 data-i18n="aud_h">Your free audit includes</h2>
+    <ul>
+      <li><div><b data-i18n="aud1_t">Tracking check</b><span data-i18n="aud1_d">Does Meta match the orders in your store? If not, your numbers can't be trusted.</span></div></li>
+      <li><div><b data-i18n="aud2_t">Ad account review</b><span data-i18n="aud2_d">Structure, audiences, creatives and wasted spend.</span></div></li>
+      <li><div><b data-i18n="aud3_t">Store review</b><span data-i18n="aud3_d">Product pages, offer and checkout, and what may be stopping visitors from buying.</span></div></li>
+      <li><div><b data-i18n="aud4_t">Your priority list</b><span data-i18n="aud4_d">What to fix first, and what we'd test in the first 2 to 4 weeks.</span></div></li>
+    </ul>
+    <p class="promise" data-i18n="aud_note">Free for brands that are a fit. We send it in a short report after our call, usually within 2 to 3 days.</p>
   </section>
 
   <section class="form" id="fit">
-    <h2>Check if we're a fit</h2>
-    <p class="note">Answer five quick questions. We'll open WhatsApp with your answers ready to send.</p>
+    <h2 data-i18n="form_h">Get your free audit</h2>
+    <p class="note" data-i18n="form_note">Answer five quick questions. If we're a fit, the audit of your ad account and store is free. We'll open WhatsApp with your answers ready to send.</p>
     <form id="fit-form" novalidate>
-      <div><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="First name is fine"></div>
-      <div><label for="store">Store link <span class="req" aria-hidden="true">*</span></label><input id="store" name="store" type="text" inputmode="url" autocomplete="url" placeholder="yourstore.com" required></div>
-      <div><label for="product">Best-selling product</label><input id="product" name="product" type="text" placeholder="What sells the most today?"></div>
-      <div><label for="market">Where do you mainly sell? <span class="req" aria-hidden="true">*</span></label><input id="market" name="market" type="text" placeholder="Country or region" required></div>
-      <div><label for="sales">Roughly how much do you sell per month? (USD)</label>
+      <div><label for="name"><span data-i18n="l_name">Your name</span></label><input id="name" name="name" type="text" autocomplete="name" placeholder="First name is fine" data-ph="p_name"></div>
+      <div><label for="store"><span data-i18n="l_store">Store link</span> <span class="req" aria-hidden="true">*</span></label><input id="store" name="store" type="text" inputmode="url" autocomplete="url" placeholder="yourstore.com" required></div>
+      <div><label for="product"><span data-i18n="l_product">Best-selling product</span></label><input id="product" name="product" type="text" placeholder="What sells the most today?" data-ph="p_product"></div>
+      <div><label for="market"><span data-i18n="l_market">Where do you mainly sell?</span> <span class="req" aria-hidden="true">*</span></label><input id="market" name="market" type="text" placeholder="Country or region" data-ph="p_market" required></div>
+      <div><label for="sales"><span data-i18n="l_sales">Roughly how much do you sell per month? (SAR)</span></label>
         <select id="sales" name="sales">
-          <option value="">Choose one</option>
-          <option>Under $20K</option>
-          <option>$20K to $50K</option>
-          <option>$50K to $150K</option>
-          <option>Over $150K</option>
+          <option value="" data-i18n="o_choose">Choose one</option>
+          <option data-i18n="o1">Under SAR 100K</option>
+          <option data-i18n="o2">SAR 100K to 250K</option>
+          <option data-i18n="o3">SAR 250K to 500K</option>
+          <option data-i18n="o4">Over SAR 500K</option>
         </select></div>
       <p class="err" id="err" role="alert"></p>
-      <button class="btn primary" type="submit">Send on WhatsApp</button>
+      <button class="btn primary" type="submit" data-i18n="send">Send on WhatsApp</button>
     </form>
-    <p class="fine">This opens WhatsApp with your answers. Nothing is stored on this page. We reply on working days.</p>
+    <p class="fine" data-i18n="fine">This opens WhatsApp with your answers. Nothing is stored on this page. We reply on working days.</p>
   </section>
 
-  <footer class="tb"><div><b>T Area Media</b></div><div>Meta, TikTok, Snapchat, Google</div></footer>
+  <section class="faq">
+    <h2 data-i18n="faq_h">Common questions</h2>
+    <details>
+      <summary><span data-i18n="q1">Do I give you my ad account?</span></summary>
+      <p data-i18n="a1">We run ads inside your own ad account. You stay the owner and can remove our access at any time.</p>
+    </details>
+    <details>
+      <summary><span data-i18n="q2">What happens after I send the form?</span></summary>
+      <p data-i18n="a2">We reply on WhatsApp on working days. If it looks like a fit, we book a short call about your numbers and goals, then run a free audit of your ad account and store before suggesting anything.</p>
+    </details>
+    <details>
+      <summary><span data-i18n="q3">Do you work with small stores?</span></summary>
+      <p data-i18n="a3">We work best with brands that already sell steadily and want to scale with paid ads. If you're just starting, we'll tell you honestly.</p>
+    </details>
+  </section>
+
+  <footer class="tb"><div><b>T Area Media</b></div><div data-i18n="foot">Meta, TikTok, Snapchat, Google</div></footer>
 </main>
 
 <script>
-// 1) Put your WhatsApp number here: country code + number, digits only (no + or spaces).
+// 1) WhatsApp number: country code + number, digits only (no + or spaces).
 var WHATSAPP_NUMBER = "201147092557";
 
+// 2) Meta Pixel ID: paste it between the quotes to turn tracking on (Events Manager > Data sources).
+//    Leave empty and nothing loads.
+var PIXEL_ID = "";
+
+// ---- Meta Pixel (only loads if PIXEL_ID is set) ----
+(function(){
+  if(!PIXEL_ID) return;
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', PIXEL_ID);
+  fbq('track', 'PageView');
+})();
+function track(ev){ try{ if(window.fbq) fbq('track', ev); }catch(_){} }
+
+// ---- Arabic / English ----
+var AR = {
+  title: "T Area Media | إعلانات مدفوعة للبراندات الإلكترونية",
+  h1: "إعلانات مربحة للمتاجر الإلكترونية اللي مبيعاتها فوق 100 ألف ريال شهرياً.",
+  lead: "ندير إعلانات ميتا وتيك توك وسناب شات وقوقل للمتاجر والبراندات الإلكترونية اللي تبيع فعلاً. نبدأ من أرقامك، ونقول لك بصراحة إذا كنا مناسبين لك.",
+  cta_fit: "احصل على مراجعتك المجانية",
+  cta_wa: "راسلنا على واتساب",
+  scarce: "نقبل براندين جديدين فقط كل شهر.",
+  plat_b: "نشتغل مع",
+  plat: "متاجر سلة وزد وشوبيفاي.",
+  get_h: "وش تحصل عليه",
+  get1_t: "دراسة السوق والمنافسين", get1_d: "من تنافس، وايش اللي ينجح في سوقك.",
+  get2_t: "مراجعة مجانية للحساب الإعلاني والمتجر", get2_d: "تقرير مختصر عن وين تخسر مبيعاتك وإيش تصلح أول.",
+  get3_t: "استراتيجية مبنية على أهدافك", get3_d: "خطة اختبار مبنية على هوامشك وعوائقك.",
+  get4_t: "نشغّل الإعلانات ونرفع التقارير", get4_d: "نطلق حملاتك ونحسّنها ونرسل لك تقارير واضحة وصريحة.",
+  aud_h: "وش تشمل مراجعتك المجانية",
+  aud1_t: "فحص التتبع", aud1_d: "هل بيانات ميتا تطابق الطلبات في متجرك؟ لو لا، ما تقدر تعتمد على أرقامك.",
+  aud2_t: "مراجعة الحساب الإعلاني", aud2_d: "الهيكلة والجمهور والتصاميم والمصاريف الضايعة.",
+  aud3_t: "مراجعة المتجر", aud3_d: "صفحات المنتجات والعرض وإتمام الطلب، وإيش اللي ممكن يمنع الزوار من الشراء.",
+  aud4_t: "قائمة أولوياتك", aud4_d: "إيش تصلح أول، وإيش بنختبر في أول 2 إلى 4 أسابيع.",
+  aud_note: "مجانية للبراندات اللي نناسبها. نرسلها لك في تقرير مختصر بعد مكالمتنا، غالباً خلال يومين إلى 3 أيام.",
+  how_h: "كيف نقرر",
+  how1_t: "هامش ربحك", how1_d: "نبدأ من نقطة التعادل عندك، مو من هدف عائد إعلاني محدد.",
+  how2_t: "أكبر عائق عندك", how2_d: "لو الإعلانات مو هي المشكلة، بنقول لك.",
+  how3_t: "التتبع عندك", how3_d: "نقارن بيانات ميتا مع متجرك، ونبني نظام قياس خاص فينا.",
+  how4_t: "مرحلة اختبار", how4_d: "من أسبوعين إلى 4 أسابيع اختبار قبل ما نكبّر الميزانية.",
+  promise: "ما أحد يقدر يضمن نتائج بصدق. نعدك بخطة اختبار واضحة بأرقام متفق عليها قبل ما نكبّر، وتقارير صريحة، وردود سريعة، وأتعاب مرتبطة بمبيعاتك، فنحن مدفوعين عشان نكبّرها.",
+  who_h: "من وراء T Area Media",
+  who_p: "T Area Media فريق من الميديا بايرز ومسوّقي الأداء أصحاب الخبرة، نشغّل الإعلانات المدفوعة للمتاجر والبراندات الإلكترونية. ندرس منافسينك، ونراجع حسابك الإعلاني ومتجرك، وبعدها نخطط ونطلق ونحسّن الحملات على ميتا وتيك توك وسناب شات وقوقل. تتواصل مباشرة مع الناس اللي يبنون إعلاناتك.",
+  form_h: "احصل على مراجعتك المجانية",
+  form_note: "جاوب على خمسة أسئلة سريعة. إذا كنا مناسبين لبعض، مراجعة حسابك الإعلاني ومتجرك مجانية. بنفتح لك واتساب والإجابات جاهزة للإرسال.",
+  l_name: "اسمك", p_name: "الاسم الأول يكفي",
+  l_store: "رابط المتجر",
+  l_product: "المنتج الأكثر مبيعاً", p_product: "وش أكثر شي يتباع الحين؟",
+  l_market: "وين تبيع بشكل رئيسي؟", p_market: "الدولة أو المنطقة",
+  l_sales: "تقريباً كم مبيعاتك الشهرية؟ (بالريال)",
+  o_choose: "اختر إجابة", o1: "أقل من 100 ألف ريال", o2: "من 100 إلى 250 ألف ريال", o3: "من 250 إلى 500 ألف ريال", o4: "أكثر من 500 ألف ريال",
+  send: "أرسل على واتساب",
+  fine: "بيفتح واتساب والإجابات جاهزة. ما نحفظ أي شي في هذي الصفحة. نرد في أيام العمل.",
+  faq_h: "أسئلة شائعة",
+  q1: "هل أعطيكم حسابي الإعلاني؟",
+  a1: "نشغّل الإعلانات داخل حسابك الإعلاني أنت. تبقى أنت المالك، وتقدر تسحب صلاحيتنا في أي وقت.",
+  q2: "ماذا يصير بعد ما أرسل النموذج؟",
+  a2: "نرد عليك على واتساب في أيام العمل. إذا طلعنا مناسبين لبعض، نحدد مكالمة قصيرة عن أرقامك وأهدافك، وبعدها نراجع حسابك الإعلاني ومتجرك مجاناً قبل ما نقترح أي شيء.",
+  q3: "هل تشتغلون مع المتاجر الصغيرة؟",
+  a3: "نشتغل أفضل مع البراندات اللي تبيع بشكل ثابت وتبي تكبّر بالإعلانات. إذا كنت في البداية، بنقول لك بصراحة.",
+  foot: "ميتا، تيك توك، سناب شات، قوقل"
+};
+var MSG = {
+  en: { direct: "Hi T Area Media, I'd like a free audit and to know if we'd be a fit.",
+        intro: "Hi T Area Media, I'd like a free audit and to check if we're a fit.",
+        name: "Name", store: "Store", product: "Best seller", market: "Main market", sales: "Monthly sales",
+        err: "Please add your store link and where you mainly sell." },
+  ar: { direct: "هلا T Area Media، أبي مراجعة مجانية وأعرف إذا كنا مناسبين لبعض.",
+        intro: "هلا T Area Media، أبي مراجعة مجانية وأعرف إذا كنا مناسبين لبعض.",
+        name: "الاسم", store: "المتجر", product: "الأكثر مبيعاً", market: "السوق الرئيسي", sales: "المبيعات الشهرية",
+        err: "فضلاً أضف رابط متجرك ووين تبيع بشكل رئيسي." }
+};
+var lang = "en";
+var EN = {};   // English text captured from the page at load
+
+function captureEnglish(){
+  document.querySelectorAll("[data-i18n]").forEach(function(el){ EN[el.getAttribute("data-i18n")] = el.textContent; });
+  document.querySelectorAll("[data-ph]").forEach(function(el){ EN[el.getAttribute("data-ph")] = el.getAttribute("placeholder"); });
+  EN.title = document.title;
+}
+function setLang(l){
+  lang = l;
+  var d = document.documentElement;
+  d.lang = l; d.dir = (l === "ar") ? "rtl" : "ltr";
+  var src = (l === "ar") ? AR : EN;
+  document.querySelectorAll("[data-i18n]").forEach(function(el){
+    var k = el.getAttribute("data-i18n"); if(src[k] != null) el.textContent = src[k];
+  });
+  document.querySelectorAll("[data-ph]").forEach(function(el){
+    var k = el.getAttribute("data-ph"); if(src[k] != null) el.setAttribute("placeholder", src[k]);
+  });
+  document.title = src.title;
+  var btn = document.getElementById("lang-btn");
+  btn.textContent = (l === "ar") ? "English" : "العربية";
+  btn.setAttribute("lang", (l === "ar") ? "en" : "ar");
+  document.getElementById("err").textContent = "";
+}
+captureEnglish();
+document.getElementById("lang-btn").addEventListener("click", function(){ setLang(lang === "ar" ? "en" : "ar"); });
+// Arabic ads can link straight to the Arabic page: ...T-Area-Media-/?lang=ar
+try{ if(new URLSearchParams(location.search).get("lang") === "ar") setLang("ar"); }catch(_){}
+
+// ---- WhatsApp ----
 function waLink(text){
   return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(text);
 }
 function numberOk(){ return /^\d{8,15}$/.test(WHATSAPP_NUMBER); }
-function go(text){
+function go(text, ev){
   if(!numberOk()){ alert("Add your WhatsApp number at the top of the script in this file first."); return; }
-  window.location.href = waLink(text);
+  track(ev);
+  var url = waLink(text);
+  // short pause so the pixel event can leave before the page changes
+  setTimeout(function(){ window.location.href = url; }, window.fbq ? 300 : 0);
 }
 
 document.getElementById("wa-direct").addEventListener("click", function(e){
   e.preventDefault();
-  go("Hi T Area Media, I'd like to know if we'd be a fit.");
+  go(MSG[lang].direct, "Contact");
 });
 
 document.getElementById("fit-form").addEventListener("submit", function(e){
   e.preventDefault();
-  var f = e.target, err = document.getElementById("err");
-  var store = f.store.value.trim(), market = f.market.value;
+  var f = e.target, err = document.getElementById("err"), m = MSG[lang];
+  var store = document.getElementById("store").value.trim(), market = document.getElementById("market").value.trim();
   if(!store || !market){
-    err.textContent = "Please add your store link and where you mainly sell.";
-    (!store ? f.store : f.market).focus();
+    err.textContent = m.err;
+    (!store ? document.getElementById("store") : document.getElementById("market")).focus();
     return;
   }
   err.textContent = "";
-  var lines = ["Hi T Area Media, I'd like to check if we're a fit.", ""];
-  if(f.name.value.trim()) lines.push("Name: " + f.name.value.trim());
-  lines.push("Store: " + store);
-  if(f.product.value.trim()) lines.push("Best seller: " + f.product.value.trim());
-  lines.push("Main market: " + market);
-  if(f.sales.value) lines.push("Monthly sales: " + f.sales.value);
-  go(lines.join("\n"));
+  var lines = [m.intro, ""];
+  if(document.getElementById("name").value.trim()) lines.push(m.name + ": " + document.getElementById("name").value.trim());
+  lines.push(m.store + ": " + store);
+  if(document.getElementById("product").value.trim()) lines.push(m.product + ": " + document.getElementById("product").value.trim());
+  lines.push(m.market + ": " + market);
+  if(document.getElementById("sales").value) lines.push(m.sales + ": " + document.getElementById("sales").value);
+  go(lines.join("\n"), "Lead");
 });
 </script>
 </body>
