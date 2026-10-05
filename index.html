@@ -3,8 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>T Area Media | Paid ads for D2C brands</title>
-<meta name="description" content="Meta, TikTok, Snapchat and Google ads for D2C brands. Check if we're a fit.">
+<title>T Area Media | Profitable paid ads for ecommerce brands</title>
+<meta name="description" content="Meta, TikTok, Snapchat and Google ads for ecommerce brands doing SAR 200K+ a month. Get a free audit of your ad account and store.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="T Area Media">
+<meta property="og:title" content="T Area Media | Profitable paid ads for ecommerce brands">
+<meta property="og:description" content="Meta, TikTok, Snapchat and Google ads for ecommerce brands doing SAR 200K+ a month. Get a free audit of your ad account and store.">
+<meta property="og:url" content="https://tareamedia.com/">
 <meta name="theme-color" content="#12399A">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2312399A'/%3E%3Crect x='5' y='5' width='90' height='90' fill='none' stroke='%23F4F8FF' stroke-width='6'/%3E%3Crect x='22' y='22' width='56' height='15' fill='%23F4F8FF'/%3E%3Crect x='42.5' y='37' width='15' height='41' fill='%23F4F8FF'/%3E%3Crect x='65' y='64' width='13' height='14' fill='%23FFD447'/%3E%3C/svg%3E">
 <style>
@@ -114,6 +119,11 @@ form .btn{width:100%;margin-top:6px}
 .logos a.chip{text-decoration:none;cursor:pointer;transition:transform .12s ease}
 .logos a.chip:hover{transform:translateY(-2px)}
 .logos a.chip:focus-visible{outline:3px solid var(--hi);outline-offset:3px}
+.social{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.social a{display:flex;align-items:center;gap:10px;min-height:48px;padding:10px 16px;border:2px solid var(--line);border-radius:4px;color:var(--paper);text-decoration:none;font-weight:700;font-size:16px;direction:ltr}
+.social .h{direction:ltr;unicode-bidi:isolate;opacity:.85}
+.social a:hover{background:rgba(207,224,255,.12)}
+.social a:focus-visible{outline:3px solid var(--paper);outline-offset:3px}
 [dir=rtl] body{font-family:'Segoe UI',Tahoma,system-ui,-apple-system,sans-serif}
 [dir=rtl] h1,[dir=rtl] h2{font-family:'Segoe UI',Tahoma,system-ui,sans-serif;font-weight:800;line-height:1.3}
 [dir=rtl] h1{font-size:clamp(38px,11vw,56px)}
@@ -233,6 +243,11 @@ form .btn{width:100%;margin-top:6px}
   </section>
 
   <footer class="tb"><div><b>T Area Media</b></div><div data-i18n="foot">Meta, TikTok, Snapchat, Google</div></footer>
+  <nav class="social" aria-label="Social media">
+    <a href="https://www.instagram.com/tareamedia/" target="_blank" rel="noopener noreferrer"><span data-i18n="ig">Instagram</span><span class="h">@tareamedia</span></a>
+    <a href="https://www.tiktok.com/@tareamediaa" target="_blank" rel="noopener noreferrer"><span data-i18n="tt">TikTok</span><span class="h">@tareamediaa</span></a>
+    <a href="https://x.com/tareamedia" target="_blank" rel="noopener noreferrer"><span data-i18n="xx">X</span><span class="h">@tareamedia</span></a>
+  </nav>
 </main>
 
 <script>
@@ -300,6 +315,9 @@ var AR = {
   a2: "نرد عليك على واتساب في أيام العمل. إذا طلعنا مناسبين لبعض، نحدد مكالمة قصيرة عن أرقامك وأهدافك، وبعدها نراجع حسابك الإعلاني ومتجرك مجاناً قبل ما نقترح أي شيء.",
   q3: "هل تشتغلون مع المتاجر الصغيرة؟",
   a3: "نشتغل أفضل مع البراندات اللي تبيع بشكل ثابت وتبي تكبّر بالإعلانات. إذا كنت في البداية، بنقول لك بصراحة.",
+  ig: "انستقرام",
+  tt: "تيك توك",
+  xx: "إكس",
   foot: "ميتا، تيك توك، سناب شات، جوجل"
 };
 var MSG = {
@@ -338,9 +356,28 @@ function setLang(l){
   document.getElementById("err").textContent = "";
 }
 captureEnglish();
-document.getElementById("lang-btn").addEventListener("click", function(){ setLang(lang === "ar" ? "en" : "ar"); });
+document.getElementById("lang-btn").addEventListener("click", function(){
+  setLang(lang === "ar" ? "en" : "ar");
+  try{ localStorage.setItem("tam_lang", lang); }catch(_){}
+});
 // Arabic ads can link straight to the Arabic page: ...T-Area-Media-/?lang=ar
-try{ if(new URLSearchParams(location.search).get("lang") === "ar") setLang("ar"); }catch(_){}
+(function(){
+  var q = "", saved = "", nav = "";
+  try{ q = new URLSearchParams(location.search).get("lang") || ""; }catch(_){}
+  try{ saved = localStorage.getItem("tam_lang") || ""; }catch(_){}
+  try{ nav = ((navigator.languages && navigator.languages[0]) || navigator.language || "").toLowerCase(); }catch(_){}
+  var pick = (q === "ar" || q === "en") ? q : (saved === "ar" || saved === "en") ? saved : (nav.indexOf("ar") === 0 ? "ar" : "en");
+  if(pick === "ar") setLang("ar");
+})();
+
+// ---- Where did this lead come from? (from ad link parameters) ----
+function getRef(){
+  try{
+    var u = new URLSearchParams(location.search), parts = [];
+    ["utm_source","utm_campaign","utm_content"].forEach(function(k){ var v = (u.get(k) || "").trim(); if(v) parts.push(v.slice(0, 40)); });
+    return parts.join(" | ");
+  }catch(_){ return ""; }
+}
 
 // ---- WhatsApp ----
 function waLink(text){
@@ -357,7 +394,7 @@ function go(text, ev){
 
 document.getElementById("wa-direct").addEventListener("click", function(e){
   e.preventDefault();
-  go(MSG[lang].direct, "Contact");
+  var rf = getRef(); go(MSG[lang].direct + (rf ? "\n\nRef: " + rf : ""), "Contact");
 });
 
 document.getElementById("fit-form").addEventListener("submit", function(e){
@@ -377,6 +414,7 @@ document.getElementById("fit-form").addEventListener("submit", function(e){
   lines.push(m.market + ": " + market);
   if(document.getElementById("sales").value) lines.push(m.sales + ": " + document.getElementById("sales").value);
   if(document.getElementById("spend").value) lines.push(m.spend + ": " + document.getElementById("spend").value);
+  var rf = getRef(); if(rf) lines.push("", "Ref: " + rf);
   go(lines.join("\n"), "Lead");
 });
 </script>
