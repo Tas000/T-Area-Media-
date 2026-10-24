@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>T Area Media | Paid ads built around your break-even</title>
-<meta name="description" content="Paid acquisition for Saudi and GCC ecommerce brands doing SAR 200K+ a month. We build around your break-even, not a ROAS target. Apply for a free profitability audit.">
+<meta name="description" content="Paid acquisition for Saudi and GCC ecommerce brands doing SAR 1M+ a month. We build around your break-even, not a ROAS target. Apply for a free profitability audit.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="T Area Media">
 <meta property="og:title" content="T Area Media | Paid ads built around your break-even">
-<meta property="og:description" content="Paid acquisition for Saudi and GCC ecommerce brands doing SAR 200K+ a month. We build around your break-even, not a ROAS target. Apply for a free profitability audit.">
+<meta property="og:description" content="Paid acquisition for Saudi and GCC ecommerce brands doing SAR 1M+ a month. We build around your break-even, not a ROAS target. Apply for a free profitability audit.">
 <meta property="og:url" content="https://tareamedia.com/">
 <meta name="theme-color" content="#12399A">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2312399A'/%3E%3Crect x='5' y='5' width='90' height='90' fill='none' stroke='%23F4F8FF' stroke-width='6'/%3E%3Crect x='22' y='22' width='56' height='15' fill='%23F4F8FF'/%3E%3Crect x='42.5' y='37' width='15' height='41' fill='%23F4F8FF'/%3E%3Crect x='65' y='64' width='13' height='14' fill='%23FFD447'/%3E%3C/svg%3E">
@@ -265,6 +265,140 @@ a.chip:hover{transform:translateY(-2px)}
 [dir=rtl] .lead,[dir=rtl] .sub{line-height:1.7}
 #store{direction:ltr}
 [dir=rtl] #store{text-align:right}
+
+/* ===== Calm / minimal layer (overrides) ===== */
+:root{--bp:#0B1736;--deep:#0F2048;--line:rgba(220,232,255,.16);--paper:#F4F8FF;--body:#B9C9EC;--hi:#FFD447;--gap:clamp(96px,13vw,160px)}
+body{background-image:none;background-color:var(--bp);font-weight:500;line-height:1.6}
+.wrap{max-width:940px}
+h1,h2,h3{font-family:'Schibsted Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;font-weight:700;line-height:1.12;letter-spacing:-.02em}
+h1{font-size:clamp(34px,6.2vw,60px);max-width:16em;margin-top:20px}
+h2{font-size:clamp(27px,4.2vw,42px);max-width:18em}
+h3{font-size:21px;letter-spacing:-.01em}
+.sub{font-size:18px;color:var(--body);max-width:36em}
+.lead{font-size:clamp(18px,2vw,21px);max-width:34em}
+.k{font-size:13px;letter-spacing:.14em;color:var(--body);font-weight:700;margin-bottom:18px}
+.k::before{width:6px;height:6px;background:var(--hi)}
+.tag{border:0;background:none;padding:0;font-size:14px;color:var(--body);letter-spacing:.02em}
+.tag::before{width:6px;height:6px}
+.brand span{font-size:28px}
+.lang{border:1px solid var(--line);border-radius:6px;font-weight:500}
+.btn{border-radius:8px;border-width:0;min-height:54px;font-weight:700}
+.btn.primary{background:var(--hi);color:#0B1736}
+.btn.primary:hover{background:#ffe07a}
+.btn:focus-visible,input:focus-visible,select:focus-visible,.lang:focus-visible,summary:focus-visible,.social a:focus-visible,.chip:focus-visible,.wa-line a:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
+.wa-line a{text-decoration-thickness:1px}
+
+/* boxes become hairlines */
+.bc,.ex,.qa,.old,.new,.gbox,.fpanel,.final,.tb,.verdict,.social a,.sticky,.chip.txt{border-width:1px;border-color:var(--line);border-radius:10px}
+.bc,.ex,.qa,.old,.new,.gbox{background:transparent}
+.fpanel,.final{background:var(--deep)}
+.bc{padding:26px}
+.bc-head h3{font-size:22px}
+.roas{font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:26px;letter-spacing:-.01em}
+.row{border-top-color:var(--line);font-size:15px}
+.row.left{border-top:1px solid var(--paper);font-size:17px}
+.row .bar{height:3px;background:rgba(220,232,255,.08)}
+.row .bar i{background:rgba(220,232,255,.45)}
+.verdict{font-size:15px;font-weight:700;border-radius:8px;border-style:solid}
+.verdict.good{background:transparent;color:var(--hi);border-color:var(--hi)}
+.verdict.bad{border-style:solid;color:var(--body)}
+.note-ill{font-size:14px;color:var(--body);font-weight:500}
+.big-note{border-inline-start:2px solid var(--hi);font-size:clamp(18px,2vw,20px)}
+
+.old{border-style:dashed}
+.old li{border-top-color:var(--line);font-size:16px}
+.old li::before{border-width:1px}
+.new>h3{color:var(--paper);font-size:clamp(24px,3.2vw,30px)}
+.stage{border-top:1px solid var(--line);grid-template-columns:48px 1fr}
+.stage .n{font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:20px;color:var(--hi);line-height:1.4}
+.stage b{font-size:20px}
+.stage span{font-size:16px}
+
+.deliv{border-bottom-color:var(--line)}
+.drow{border-top:1px solid var(--line)}
+.dh .n{font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:18px;color:var(--hi);line-height:1.5}
+.dh b{font-size:19px}
+.pill{border:1px solid var(--line);color:var(--body);font-weight:500;letter-spacing:0;text-transform:none;font-size:13px;border-radius:99px;padding:3px 11px}
+.drow li::before{width:5px;height:5px;background:var(--body);border-radius:50%;transform:translateY(-3px)}
+.callout{border-inline-start:2px solid var(--hi);font-weight:500;color:var(--paper)}
+
+.ex .badge{border:0;color:var(--body);padding:0;font-weight:700;letter-spacing:.12em;font-size:12px}
+.ex h3{font-size:22px}
+.qa h3{color:var(--paper);font-size:18px}
+.qa:last-child{grid-column:auto}
+@media (min-width:760px){.qas .qa:last-child{grid-column:1/-1}}
+
+.gbox{padding:clamp(26px,4vw,48px)}
+.gl{border-top-color:var(--line)}
+.gl li{border-bottom-color:var(--line);grid-template-columns:14px 1fr}
+.gl li::before{width:6px;height:6px;margin-top:11px;border-radius:50%}
+.gl b{font-size:18px}
+
+.cap .num{font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:clamp(88px,14vw,124px);letter-spacing:-.04em;line-height:.9;color:var(--paper)}
+.cap .num small{font-weight:500;color:var(--body);font-size:16px}
+.cap p{font-size:18px}
+.urgent{font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:clamp(22px,3.4vw,32px);line-height:1.2;letter-spacing:-.02em;border-top:1px solid var(--line)}
+
+.next{border-top-color:var(--line)}
+.next li{border-bottom-color:var(--line)}
+.next li::before{font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;line-height:1.7}
+.fpanel{padding:clamp(22px,3.5vw,36px)}
+input,select{border:1px solid var(--line);border-radius:8px;background-color:rgba(255,255,255,.04);font-weight:500}
+input:focus,select:focus{border-color:var(--hi)}
+label{font-weight:500;font-size:15px;color:var(--body)}
+.hint,.err{font-weight:500}
+
+.plat-h{font-size:clamp(22px,3vw,28px)}
+.chip.txt{border-radius:8px;font-weight:500}
+.chips-l{font-weight:500}
+
+.faq details{border-bottom-color:var(--line)}
+.faq details:first-of-type{border-top-color:var(--line)}
+.faq summary{font-size:18px}
+.final h2{font-size:clamp(28px,4.6vw,44px)}
+.scarce{font-weight:500;color:var(--body)}
+.tb div:last-child{border-left-color:var(--line)}
+.social a{font-weight:500}
+
+[dir=rtl] h1{font-size:clamp(30px,5.6vw,50px);line-height:1.35}
+[dir=rtl] h2{font-size:clamp(24px,4vw,36px);line-height:1.35}
+[dir=rtl] h3,[dir=rtl] .bc-head h3,[dir=rtl] .ex h3{font-size:20px}
+[dir=rtl] .qa h3{font-size:18px}
+[dir=rtl] .new>h3{font-size:clamp(22px,3vw,28px)}
+[dir=rtl] .old h3{font-size:20px}
+[dir=rtl] .urgent{font-size:clamp(20px,3.2vw,28px);line-height:1.4}
+[dir=rtl] .roas,[dir=rtl] .cap .num,[dir=rtl] .stage .n,[dir=rtl] .dh .n,[dir=rtl] .next li::before{font-family:'Schibsted Grotesk',sans-serif}
+[dir=rtl] .tb div:last-child{border-right-color:var(--line)}
+
+/* ===== T Area palette restored: blueprint blue + pale blue + yellow ===== */
+:root{--bp:#12399A;--deep:#0C2A73;--line:rgba(207,224,255,.30);--body:#DCE8FF;--paper:#F4F8FF;--hi:#FFD447}
+body{background-color:var(--bp);
+  background-image:linear-gradient(rgba(207,224,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(207,224,255,.07) 1px,transparent 1px);
+  background-size:48px 48px}
+.btn.primary{color:var(--deep)}
+input,select{background-color:rgba(12,42,115,.55)}
+.fpanel,.final,.sticky,.tb{background:var(--deep)}
+.k{color:var(--body)}
+
+/* the problem section becomes a pale-blue paper panel: blue / white / yellow rhythm */
+.problem{background:var(--paper);color:var(--deep);border-radius:18px;padding:clamp(28px,5vw,64px)}
+.problem .k{color:var(--bp)}
+.problem .k::before{background:var(--bp)}
+.problem h2{color:var(--deep)}
+.problem .sub{color:#3A5596}
+.problem .bc{background:#fff;border-color:rgba(12,42,115,.16)}
+.problem .bc-head h3,.problem .roas{color:var(--deep)}
+.problem .bc-head small{color:#5B70A3}
+.problem .row{color:#3A5596;border-top-color:rgba(12,42,115,.12)}
+.problem .row b{color:var(--deep)}
+.problem .row.left{color:var(--deep);border-top:1px solid var(--deep)}
+.problem .row .bar{background:rgba(12,42,115,.07)}
+.problem .row .bar i{background:rgba(18,57,154,.35)}
+.problem .row.left .bar i{background:var(--bp)}
+.problem .verdict.good{background:var(--hi);border-color:var(--hi);color:var(--deep)}
+.problem .verdict.bad{background:transparent;border-color:rgba(12,42,115,.3);color:var(--deep)}
+.problem .note-ill{color:#5B70A3}
+.problem .big-note{color:var(--deep);border-inline-start:3px solid var(--hi)}
 </style>
 </head>
 <body>
@@ -280,7 +414,7 @@ a.chip:hover{transform:translateY(-2px)}
 
   <!-- 1. HOOK -->
   <section class="hero">
-    <p class="tag" data-i18n="tag">For ecommerce brands doing SAR 200K+ per month</p>
+    <p class="tag" data-i18n="tag">For ecommerce brands doing SAR 1M+ per month</p>
     <h1 data-i18n="h1" data-html>Your ROAS might look good while your business is <span class="hl">losing money.</span> We'll find out why before you scale.</h1>
     <p class="lead" data-i18n="lead">We find the gap between the numbers that look good and the numbers that actually make your business profitable, then build your acquisition strategy around it.</p>
     <div class="cta">
@@ -294,24 +428,24 @@ a.chip:hover{transform:translateY(-2px)}
   <section class="problem">
     <p class="k" data-i18n="k_problem">The problem</p>
     <h2 data-i18n="aha_h">A 5X ROAS does not automatically mean you are making money.</h2>
-    <p class="sub" data-i18n="aha_p">SAR 20,000 in ads brings in SAR 100,000 in sales. Both brands below do exactly that. Same ads, same 5X ROAS, two very different businesses.</p>
+    <p class="sub" data-i18n="aha_p">SAR 200,000 in ads brings in SAR 1,000,000 in sales. Both brands below do exactly that. Same ads, same 5X ROAS, two very different businesses.</p>
     <div class="cmp">
       <article class="bc">
         <div class="bc-head"><div><h3 data-i18n="ba_t">Brand A</h3><small data-i18n="ba_s">65% margin</small></div><div class="roas">5X ROAS</div></div>
-        <div class="row"><span data-i18n="r_rev">Sales from ads</span><b>SAR 100,000</b><div class="bar"><i style="width:100%"></i></div></div>
-        <div class="row"><span data-i18n="r_cogs">Product cost</span><b>SAR 35,000</b><div class="bar"><i style="width:35%"></i></div></div>
-        <div class="row"><span data-i18n="r_ship">Shipping, payment fees, discounts, returns</span><b>SAR 12,000</b><div class="bar"><i style="width:12%"></i></div></div>
-        <div class="row"><span data-i18n="r_ads">Ad spend</span><b>SAR 20,000</b><div class="bar"><i style="width:20%"></i></div></div>
-        <div class="row left"><span data-i18n="r_left">What's left</span><b>SAR 33,000</b><div class="bar"><i style="width:33%"></i></div></div>
+        <div class="row"><span data-i18n="r_rev">Sales from ads</span><b>SAR 1,000,000</b><div class="bar"><i style="width:100%"></i></div></div>
+        <div class="row"><span data-i18n="r_cogs">Product cost</span><b>SAR 350,000</b><div class="bar"><i style="width:35%"></i></div></div>
+        <div class="row"><span data-i18n="r_ship">Shipping, payment fees, discounts, returns</span><b>SAR 120,000</b><div class="bar"><i style="width:12%"></i></div></div>
+        <div class="row"><span data-i18n="r_ads">Ad spend</span><b>SAR 200,000</b><div class="bar"><i style="width:20%"></i></div></div>
+        <div class="row left"><span data-i18n="r_left">What's left</span><b>SAR 330,000</b><div class="bar"><i style="width:33%"></i></div></div>
         <p class="verdict good" data-i18n="va">Profitable at 5X</p>
       </article>
       <article class="bc">
         <div class="bc-head"><div><h3 data-i18n="bb_t">Brand B</h3><small data-i18n="bb_s">35% margin</small></div><div class="roas">5X ROAS</div></div>
-        <div class="row"><span data-i18n="r_rev2">Sales from ads</span><b>SAR 100,000</b><div class="bar"><i style="width:100%"></i></div></div>
-        <div class="row"><span data-i18n="r_cogs2">Product cost</span><b>SAR 65,000</b><div class="bar"><i style="width:65%"></i></div></div>
-        <div class="row"><span data-i18n="r_ship2">Shipping, payment fees, discounts, returns</span><b>SAR 18,000</b><div class="bar"><i style="width:18%"></i></div></div>
-        <div class="row"><span data-i18n="r_ads2">Ad spend</span><b>SAR 20,000</b><div class="bar"><i style="width:20%"></i></div></div>
-        <div class="row left"><span data-i18n="r_left2">What's left</span><b>&minus;SAR 3,000</b><div class="bar"><i style="width:0"></i></div></div>
+        <div class="row"><span data-i18n="r_rev2">Sales from ads</span><b>SAR 1,000,000</b><div class="bar"><i style="width:100%"></i></div></div>
+        <div class="row"><span data-i18n="r_cogs2">Product cost</span><b>SAR 650,000</b><div class="bar"><i style="width:65%"></i></div></div>
+        <div class="row"><span data-i18n="r_ship2">Shipping, payment fees, discounts, returns</span><b>SAR 180,000</b><div class="bar"><i style="width:18%"></i></div></div>
+        <div class="row"><span data-i18n="r_ads2">Ad spend</span><b>SAR 200,000</b><div class="bar"><i style="width:20%"></i></div></div>
+        <div class="row left"><span data-i18n="r_left2">What's left</span><b>&minus;SAR 30,000</b><div class="bar"><i style="width:0"></i></div></div>
         <p class="verdict bad" data-i18n="vb">Losing money at 5X</p>
       </article>
     </div>
@@ -342,34 +476,6 @@ a.chip:hover{transform:translateY(-2px)}
         <div class="stage"><div class="n">03</div><div><b data-i18n="s3_t">Test deliberately</b><span data-i18n="s3_d">Hypothesis, test, data, decision. Every test has a reason and a number that decides it.</span></div></div>
         <div class="stage"><div class="n">04</div><div><b data-i18n="s4_t">Scale what proves itself</b><span data-i18n="s4_d">Budget goes up when the economics support it, not because a campaign looked good for a few days.</span></div></div>
       </div>
-    </div>
-  </section>
-
-  <!-- 5. DIAGNOSIS -->
-  <section class="diag">
-    <p class="k" data-i18n="k_diag">The diagnosis</p>
-    <h2 data-i18n="diag_h">Before we touch your budget, we find where the money is leaking.</h2>
-    <div class="cards">
-      <article class="card">
-        <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="18"/><path d="M15 20h18M15 29h18"/><rect class="y" x="36" y="36" width="9" height="9"/></svg>
-        <h3 data-i18n="d1_t">Economics</h3><p data-i18n="d1_d">Are you acquiring customers at a profitable cost?</p>
-      </article>
-      <article class="card">
-        <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="12"/><path d="M24 4v10M24 34v10M4 24h10M34 24h10"/><rect class="y" x="36" y="36" width="9" height="9"/></svg>
-        <h3 data-i18n="d2_t">Tracking</h3><p data-i18n="d2_d">Can you actually trust the data you're making decisions from?</p>
-      </article>
-      <article class="card">
-        <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M5 8h38L29 26v14l-10 4V26z"/><rect class="y" x="36" y="36" width="9" height="9"/></svg>
-        <h3 data-i18n="d3_t">Acquisition</h3><p data-i18n="d3_d">Are the campaigns and creatives doing their job?</p>
-      </article>
-      <article class="card">
-        <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="20" width="30" height="24"/><path d="M21 3v20M14 16l7 7 7-7"/><rect class="y" x="36" y="36" width="9" height="9"/></svg>
-        <h3 data-i18n="d4_t">Conversion</h3><p data-i18n="d4_d">Are visitors failing to buy because of something outside the ad account?</p>
-      </article>
-      <article class="card">
-        <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="16" width="24" height="24"/><rect x="17" y="6" width="24" height="24"/><rect class="y" x="36" y="36" width="9" height="9"/></svg>
-        <h3 data-i18n="d5_t">Market</h3><p data-i18n="d5_d">What are competitors doing differently?</p>
-      </article>
     </div>
   </section>
 
@@ -424,8 +530,8 @@ a.chip:hover{transform:translateY(-2px)}
     <p class="sub" data-i18n="proof_p">Our approach comes from working hands on with ecommerce accounts and seeing where growth actually gets stuck. Instead of asking you to take our word for it, here are the checks we use to diagnose an account before deciding what to scale.</p>
     <div class="exs">
       <article class="ex"><span class="badge" data-i18n="badge">WHAT WE LOOK FOR</span><h3 data-i18n="ex1_t">Economics</h3><p data-i18n="ex1_d">A campaign shows 3.1X ROAS. The brand's break-even ROAS is 3.4X. Every order loses money while the dashboard looks fine.</p></article>
-      <article class="ex"><span class="badge" data-i18n="badge2">WHAT WE LOOK FOR</span><h3 data-i18n="ex2_t">Tracking</h3><p data-i18n="ex2_d">Meta reports 214 purchases in a week. The store recorded 168 orders. Until that gap is explained, every decision rests on the wrong number.</p></article>
-      <article class="ex"><span class="badge" data-i18n="badge3">WHAT WE LOOK FOR</span><h3 data-i18n="ex3_t">Conversion</h3><p data-i18n="ex3_d">Strong click-through, 4,000 product page visits, 38 orders. The ad did its job. The page didn't.</p></article>
+      <article class="ex"><span class="badge" data-i18n="badge2">WHAT WE LOOK FOR</span><h3 data-i18n="ex2_t">Tracking</h3><p data-i18n="ex2_d">Meta reports 842 purchases in a week. The store recorded 671 orders. Until that gap is explained, every decision rests on the wrong number.</p></article>
+      <article class="ex"><span class="badge" data-i18n="badge3">WHAT WE LOOK FOR</span><h3 data-i18n="ex3_t">Conversion</h3><p data-i18n="ex3_d">Strong click-through, 40,000 product page visits, 380 orders. The ad did its job. The page didn't.</p></article>
     </div>
     <p class="proof-s" data-i18n="proof_s" data-html>We share how we work on <a href="https://www.instagram.com/tareamedia/" target="_blank" rel="noopener noreferrer">Instagram</a>, <a href="https://www.tiktok.com/@tareamediaa" target="_blank" rel="noopener noreferrer">TikTok</a> and <a href="https://x.com/tareamedia" target="_blank" rel="noopener noreferrer">X</a>.</p>
   </section>
@@ -498,20 +604,20 @@ a.chip:hover{transform:translateY(-2px)}
           <div><label for="sales"><span data-i18n="l_sales">Monthly sales (SAR)</span></label>
             <select id="sales" name="sales">
               <option value="" data-i18n="o_choose2">Choose one</option>
-              <option data-i18n="o1">Under SAR 200K</option>
-              <option data-i18n="o2">SAR 200K to 500K</option>
-              <option data-i18n="o3">SAR 500K to 1M</option>
-              <option data-i18n="o4">Over SAR 1M</option>
+              <option data-i18n="o1">Under SAR 1M</option>
+              <option data-i18n="o2">SAR 1M to 2M</option>
+              <option data-i18n="o3">SAR 2M to 5M</option>
+              <option data-i18n="o4">Over SAR 5M</option>
             </select>
-            <p class="hint" id="sales-hint" role="status" hidden data-i18n="hint_low">We work with brands doing SAR 200K+ per month. You can still apply, but we'll tell you honestly if it's too early.</p></div>
+            <p class="hint" id="sales-hint" role="status" hidden data-i18n="hint_low">We work with brands doing SAR 1M+ per month. You can still apply, but we'll tell you honestly if it's too early.</p></div>
           <div><label for="spend"><span data-i18n="l_spend">Monthly ad spend (SAR)</span></label>
             <select id="spend" name="spend">
               <option value="" data-i18n="o_choose3">Choose one</option>
-              <option data-i18n="s1">Under SAR 20K</option>
-              <option data-i18n="s2">SAR 20K to 40K</option>
-              <option data-i18n="s3">SAR 40K to 100K</option>
-              <option data-i18n="s4">SAR 100K to 200K</option>
-              <option data-i18n="s5">SAR 200K+</option>
+              <option data-i18n="s1">Under SAR 50K</option>
+              <option data-i18n="s2">SAR 50K to 100K</option>
+              <option data-i18n="s3">SAR 100K to 200K</option>
+              <option data-i18n="s4">SAR 200K to 400K</option>
+              <option data-i18n="s5">SAR 400K+</option>
             </select></div>
           <p class="err full" id="err" role="alert"></p>
           <button class="btn primary full" type="submit" data-i18n="send">See If My Brand Qualifies</button>
@@ -541,15 +647,7 @@ a.chip:hover{transform:translateY(-2px)}
     <div class="fl">
     <details>
       <summary><span data-i18n="q1">Who do you work with, and what revenue level do I need?</span></summary>
-      <p data-i18n="a1">Established ecommerce and D2C brands in Saudi Arabia and the wider GCC doing SAR 200,000+ per month, already selling steadily. Below that, we'll tell you honestly if it's too early.</p>
-    </details>
-    <details>
-      <summary><span data-i18n="q2">Do you work with Shopify, Salla and Zid?</span></summary>
-      <p data-i18n="a2">Yes, all three, and other established ecommerce platforms. What matters is that tracking can be set up properly.</p>
-    </details>
-    <details>
-      <summary><span data-i18n="q3">Which advertising platforms do you manage?</span></summary>
-      <p data-i18n="a3">Meta, TikTok, Snapchat and Google. We only recommend the channels that make sense for your numbers.</p>
+      <p data-i18n="a1">Established ecommerce and D2C brands in Saudi Arabia and the wider GCC doing SAR 1,000,000+ per month, already selling steadily. Below that, we'll tell you honestly if it's too early.</p>
     </details>
     <details>
       <summary><span data-i18n="q4">Do I give you my ad account?</span></summary>
@@ -571,10 +669,6 @@ a.chip:hover{transform:translateY(-2px)}
       <summary><span data-i18n="q8">How much do you charge?</span></summary>
       <p data-i18n="a8">Our fee is tied to your sales. We share the exact structure on the call, once we know we're a fit.</p>
     </details>
-    <details>
-      <summary><span data-i18n="q9">What happens after I submit the form?</span></summary>
-      <p data-i18n="a9">We reply on WhatsApp on working days. If it looks like a fit, we book a short call about your numbers and goals, then run a free audit of your ad account and store before suggesting anything.</p>
-    </details>
     </div>
   </section>
 
@@ -582,7 +676,7 @@ a.chip:hover{transform:translateY(-2px)}
   <section class="final-wrap">
     <div class="final" id="final">
       <h2 data-i18n="fin_h">Your next growth decision should be based on your numbers, not guesswork.</h2>
-      <p class="sub" data-i18n="fin_p">If your ecommerce brand is already doing SAR 200K+ per month, we'll look at the economics, acquisition setup and bottlenecks before recommending what to do next.</p>
+      <p class="sub" data-i18n="fin_p">If your ecommerce brand is already doing SAR 1M+ per month, we'll look at the economics, acquisition setup and bottlenecks before recommending what to do next.</p>
       <a class="btn primary" href="#fit" data-i18n="fin_btn">See If My Brand Qualifies</a>
       <p class="scarce" data-i18n="fin_s">Limited to 2 new brands per month.</p>
     </div>
@@ -621,7 +715,7 @@ function track(ev){ try{ if(window.fbq) fbq('track', ev); }catch(_){} }
 // ---- Arabic / English ----
 var AR = {
   title: "T Area Media | إعلانات مدفوعة مبنية على نقطة التعادل عندك",
-  tag: "للمتاجر الإلكترونية اللي مبيعاتها فوق 200 ألف ريال شهرياً",
+  tag: "للمتاجر الإلكترونية اللي مبيعاتها فوق مليون ريال شهرياً",
   h1: "ممكن يطلع عائد إعلاناتك ممتاز، وبراندك <span class=\"hl\">يخسر فلوس.</span> بنعرف السبب قبل ما تكبّر.",
   lead: "نلقى الفرق بين الأرقام اللي تبان حلوة والأرقام اللي فعلاً تخلي بزنسك رابح، وبعدها نبني استراتيجية اكتسابك حوله.",
   cta_hero: "اعرف إذا براندك مؤهل", cta_hero2: "اعرف إذا براندك مؤهل",
@@ -630,7 +724,7 @@ var AR = {
 
   k_problem: "المشكلة",
   aha_h: "عائد إعلاني 5X ما يعني تلقائياً إنك تربح.",
-  aha_p: "إنفاق إعلاني 20,000 ريال يجيب مبيعات 100,000 ريال. والبراندين تحت يسوون نفس الشيء بالضبط. نفس الإعلانات، ونفس العائد 5X، لكن بزنسين مختلفين تماماً.",
+  aha_p: "إنفاق إعلاني 200,000 ريال يجيب مبيعات 1,000,000 ريال. والبراندين تحت يسوون نفس الشيء بالضبط. نفس الإعلانات، ونفس العائد 5X، لكن بزنسين مختلفين تماماً.",
   ba_t: "البراند أ", ba_s: "هامش ربح 65%",
   bb_t: "البراند ب", bb_s: "هامش ربح 35%",
   r_rev: "المبيعات من الإعلانات", r_rev2: "المبيعات من الإعلانات",
@@ -676,8 +770,8 @@ var AR = {
   proof_p: "منهجنا جاي من الشغل المباشر على حسابات المتاجر الإلكترونية ومن مشاهدة وين يتعثر النمو فعلاً. وبدل ما نطلب منك تصدق كلامنا، هذي الفحوصات اللي نستخدمها لتشخيص أي حساب قبل ما نقرر وش نكبّر.",
   badge: "ما نبحث عنه", badge2: "ما نبحث عنه", badge3: "ما نبحث عنه",
   ex1_t: "الربحية", ex1_d: "حملة تعرض عائد 3.1X. ونقطة التعادل عند البراند 3.4X. كل طلب يخسّر، والداشبورد يبان سليم.",
-  ex2_t: "التتبع", ex2_d: "ميتا تسجّل 214 عملية شراء في أسبوع. والمتجر سجّل 168 طلب. إلى أن نفهم الفرق، كل قرار مبني على رقم غلط.",
-  ex3_t: "التحويل", ex3_d: "نسبة نقر قوية، و4,000 زيارة لصفحة المنتج، و38 طلب. الإعلان سوّى شغله. والصفحة لا.",
+  ex2_t: "التتبع", ex2_d: "ميتا تسجّل 842 عملية شراء في أسبوع. والمتجر سجّل 671 طلب. إلى أن نفهم الفرق، كل قرار مبني على رقم غلط.",
+  ex3_t: "التحويل", ex3_d: "نسبة نقر قوية، و40,000 زيارة لصفحة المنتج، و380 طلب. الإعلان سوّى شغله. والصفحة لا.",
   proof_s: "نشارك طريقة شغلنا على <a href=\"https://www.instagram.com/tareamedia/\" target=\"_blank\" rel=\"noopener noreferrer\">انستقرام</a> و<a href=\"https://www.tiktok.com/@tareamediaa\" target=\"_blank\" rel=\"noopener noreferrer\">تيك توك</a> و<a href=\"https://x.com/tareamedia\" target=\"_blank\" rel=\"noopener noreferrer\">إكس</a>.",
 
   k_obj: "قبل لا تقدّم",
@@ -720,10 +814,10 @@ var AR = {
   l_market: "وين تبيع بشكل رئيسي؟", p_market: "الدولة أو المنطقة",
   l_sales: "المبيعات الشهرية (بالريال)",
   l_spend: "الإنفاق الإعلاني الشهري (بالريال)",
-  s1: "أقل من 20 ألف ريال", s2: "من 20 إلى 40 ألف ريال", s3: "من 40 إلى 100 ألف ريال", s4: "من 100 إلى 200 ألف ريال", s5: "أكثر من 200 ألف ريال",
+  s1: "أقل من 50 ألف ريال", s2: "من 50 إلى 100 ألف ريال", s3: "من 100 إلى 200 ألف ريال", s4: "من 200 إلى 400 ألف ريال", s5: "أكثر من 400 ألف ريال",
   o_choose: "اختر إجابة", o_choose2: "اختر إجابة", o_choose3: "اختر إجابة",
-  o1: "أقل من 200 ألف ريال", o2: "من 200 إلى 500 ألف ريال", o3: "من 500 ألف إلى مليون ريال", o4: "أكثر من مليون ريال",
-  hint_low: "نشتغل مع البراندات اللي مبيعاتها فوق 200 ألف ريال شهرياً. تقدر تقدّم، لكن بنقول لك بصراحة إذا كان الوقت مبكر.",
+  o1: "أقل من مليون ريال", o2: "من مليون إلى مليونين ريال", o3: "من مليونين إلى 5 ملايين ريال", o4: "أكثر من 5 ملايين ريال",
+  hint_low: "نشتغل مع البراندات اللي مبيعاتها فوق مليون ريال شهرياً. تقدر تقدّم، لكن بنقول لك بصراحة إذا كان الوقت مبكر.",
   send: "اعرف إذا براندي مؤهل",
   fine: "هذا يفتح واتساب مع إجاباتك. ما نحفظ شيء في هذي الصفحة. نرد في أيام العمل.",
 
@@ -735,7 +829,7 @@ var AR = {
   k_faq: "الأسئلة",
   faq_h: "أسئلة شائعة",
   q1: "مع من تشتغلون، وكم لازم تكون مبيعاتي؟",
-  a1: "البراندات الإلكترونية الراسخة في السعودية وبقية الخليج، اللي مبيعاتها 200,000 ريال شهرياً أو أكثر وتبيع بشكل ثابت. إذا كنت أقل، بنقول لك بصراحة إذا كان الوقت مبكر.",
+  a1: "البراندات الإلكترونية الراسخة في السعودية وبقية الخليج، اللي مبيعاتها 1,000,000 ريال شهرياً أو أكثر وتبيع بشكل ثابت. إذا كنت أقل، بنقول لك بصراحة إذا كان الوقت مبكر.",
   q2: "هل تشتغلون مع شوبيفاي وسلة وزد؟",
   a2: "نعم، الثلاثة، ومنصات تجارة إلكترونية راسخة ثانية. المهم إن التتبع يقدر ينضبط صح.",
   q3: "أي منصات إعلان تديرون؟",
@@ -754,7 +848,7 @@ var AR = {
   a9: "نرد عليك على واتساب في أيام العمل. إذا طلعنا مناسبين لبعض، نحدد مكالمة قصيرة عن أرقامك وأهدافك، وبعدها نراجع حسابك الإعلاني ومتجرك مجاناً قبل ما نقترح أي شيء.",
 
   fin_h: "قرارك القادم للنمو لازم يبنى على أرقامك، مو على التخمين.",
-  fin_p: "إذا كان براندك الإلكتروني أصلاً فوق 200 ألف ريال شهرياً، نراجع الأرقام وإعداد الاكتساب والعوائق قبل ما نوصي بأي خطوة.",
+  fin_p: "إذا كان براندك الإلكتروني أصلاً فوق مليون ريال شهرياً، نراجع الأرقام وإعداد الاكتساب والعوائق قبل ما نوصي بأي خطوة.",
   fin_btn: "اعرف إذا براندي مؤهل",
   fin_s: "محدود بـ 2 براند جديد شهرياً.",
 
@@ -841,7 +935,7 @@ document.getElementById("wa-direct").addEventListener("click", function(e){
   var rf = getRef(); go(MSG[lang].direct + (rf ? "\n\nRef: " + rf : ""), "Contact");
 });
 
-// Honest note when the revenue answer is under SAR 200K (they can still apply)
+// Honest note when the revenue answer is under SAR 1M (they can still apply)
 document.getElementById("sales").addEventListener("change", function(){
   document.getElementById("sales-hint").hidden = (this.selectedIndex !== 1);
 });
